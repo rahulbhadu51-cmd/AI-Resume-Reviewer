@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Reviewer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🤖 AI Resume Reviewer</h1>
+
+        <label>Select Resume (PDF)</label>
+
+        <input
+            type="file"
+            id="resume"
+            accept=".pdf"
+        >
+
+        <br><br>
+
+        <label>Job Description</label>
+
+        <textarea
+            id="job"
+            rows="12"
+            placeholder="Paste Job Description Here..."
+        ></textarea>
+
+        <br><br>
+
+        <button id="analyzeBtn">
+            Analyze Resume
+        </button>
+
+        <br><br>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
