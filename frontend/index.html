@@ -2,20 +2,69 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>AI Resume Reviewer</title>
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            🤖 AI Resume Reviewer
+
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="#">Home</a></li>
+
+            <li><a href="#">Features</a></li>
+
+            <li><a href="#">About</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- ================= MAIN ================= -->
+
     <div class="container">
 
-        <h1>🤖 AI Resume Reviewer</h1>
+        <h1>
 
-        <label>Select Resume (PDF)</label>
+            Analyze Your Resume with AI
+
+        </h1>
+
+        <p class="subtitle">
+
+            Upload your resume, paste the job description and receive an ATS
+            Score, matched skills, missing skills and AI-powered suggestions.
+
+        </p>
+
+        <label>
+
+            📄 Select Resume (PDF)
+
+        </label>
 
         <input
             type="file"
@@ -23,27 +72,35 @@
             accept=".pdf"
         >
 
-        <br><br>
+        <label>
 
-        <label>Job Description</label>
+            💼 Job Description
+
+        </label>
 
         <textarea
             id="job"
-            rows="12"
+            rows="10"
             placeholder="Paste Job Description Here..."
         ></textarea>
 
-        <br><br>
-
         <button id="analyzeBtn">
-            Analyze Resume
+
+            🚀 Analyze Resume
+
         </button>
 
-        <br><br>
+        <!-- RESULT -->
 
         <div id="result"></div>
 
     </div>
+
+    <!-- jsPDF -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- JS -->
 
     <script src="script.js"></script>
 
