@@ -29,12 +29,12 @@ document.getElementById("analyzeBtn").addEventListener("click", async () => {
     try {
 
         const response = await fetch(
-            "http://127.0.0.1:8000/analyze-resume",
-            {
-                method: "POST",
-                body: formData
-            }
-        );
+    "https://ai-resume-reviewer-j4z1.onrender.com/analyze-resume",
+    {
+        method: "POST",
+        body: formData
+    }
+);
 
         if (!response.ok) {
             throw new Error("Server Error");
