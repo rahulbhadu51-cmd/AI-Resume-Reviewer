@@ -8,25 +8,27 @@ from backend.ai_service import get_ai_feedback
 app = FastAPI()
 
 # ----------------------------
-# CORS
+# CORS Configuration
 # ----------------------------
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://127.0.0.1:5500"],
-    allow_credentials=True,
+    allow_origins=["*"],          # Allow requests from any frontend
+    allow_credentials=False,      # Must be False when using "*"
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 # ----------------------------
-# Home
+# Home Route
 # ----------------------------
 @app.get("/")
 def home():
-    return {"message": "Welcome to AI Resume Reviewer 🚀"}
+    return {
+        "message": "Welcome to AI Resume Reviewer 🚀"
+    }
 
 # ----------------------------
-# Analyze Text Resume
+# Analyze Resume Text
 # ----------------------------
 @app.post("/analyze")
 def analyze_resume(data: ResumeRequest):
@@ -42,11 +44,13 @@ def analyze_resume(data: ResumeRequest):
 @app.post("/upload-resume")
 async def upload_resume(file: UploadFile = File(...)):
 
-    text = extract_text_from_pdf(await file.read())
+    resume_text = extract_text_from_pdf(
+        await file.read()
+    )
 
     return {
         "filename": file.filename,
-        "text": text
+        "text": resume_text
     }
 
 # ----------------------------
@@ -58,14 +62,18 @@ async def analyze_resume_file(
     job_description: str = Form(...)
 ):
 
-    resume_text = extract_text_from_pdf(await file.read())
+    # Extract resume text
+    resume_text = extract_text_from_pdf(
+        await file.read()
+    )
 
+    # Calculate ATS score
     analysis = calculate_match(
         resume_text,
         job_description
     )
 
-    # AI Feedback
+    # Generate AI feedback
     try:
         ai_feedback = get_ai_feedback(
             resume_text,
@@ -73,7 +81,10 @@ async def analyze_resume_file(
         )
 
     except Exception as e:
-        ai_feedback = f"AI Feedback is temporarily unavailable.\n\nError:\n{str(e)}"
+        ai_feedback = (
+            "⚠ AI Feedback is temporarily unavailable.\n\n"
+            f"Reason:\n{str(e)}"
+        )
 
     return {
         "filename": file.filename,
