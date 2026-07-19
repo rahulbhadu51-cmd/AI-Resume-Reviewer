@@ -475,3 +475,368 @@ h1{
 }
 
 }
+/* ==========================================
+   DAY 12 UI UPGRADE
+========================================== */
+
+.ai-feedback{
+
+    background:linear-gradient(135deg,#ffffff,#f8fbff);
+
+    border-left:6px solid #2563eb;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    line-height:1.9;
+
+    font-size:16px;
+
+    color:#333;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    overflow-x:auto;
+
+}
+
+.ai-feedback h1{
+
+    font-size:30px;
+
+    color:#1e40af;
+
+    margin-bottom:18px;
+
+    border-bottom:3px solid #2563eb;
+
+    padding-bottom:10px;
+
+}
+
+.ai-feedback h2{
+
+    color:#2563eb;
+
+    margin-top:25px;
+
+    margin-bottom:12px;
+
+    font-size:22px;
+
+}
+
+.ai-feedback h3{
+
+    color:#0f172a;
+
+    margin-top:20px;
+
+    margin-bottom:10px;
+
+    font-size:19px;
+
+}
+
+.ai-feedback strong{
+
+    color:#111827;
+
+}
+
+.ai-feedback ul{
+
+    margin-left:22px;
+
+    margin-top:8px;
+
+}
+
+.ai-feedback li{
+
+    margin-bottom:8px;
+
+}
+
+/* ==========================
+   RESULT CARD
+========================== */
+
+.section{
+
+    background:white;
+
+    padding:22px;
+
+    border-radius:15px;
+
+    margin-top:25px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+.section:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.10);
+
+}
+
+/* ==========================
+   SCORE CARD
+========================== */
+
+.score{
+
+    font-size:65px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    color:#16a34a;
+
+    text-shadow:0 3px 10px rgba(0,0,0,.12);
+
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+button{
+
+    transition:.35s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px) scale(1.02);
+
+}
+
+/* ==========================
+   PROGRESS BAR
+========================== */
+
+.progress-bar{
+
+    height:30px;
+
+    border-radius:40px;
+
+    overflow:hidden;
+
+}
+
+.progress{
+
+    font-size:15px;
+
+    line-height:30px;
+
+    font-weight:bold;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    .ai-feedback{
+
+        padding:18px;
+
+        font-size:15px;
+
+    }
+
+    .score{
+
+        font-size:48px;
+
+    }
+
+}
+/* ==========================
+   ATS CIRCLE
+========================== */
+
+.score-circle{
+
+    position:relative;
+
+    width:180px;
+
+    height:180px;
+
+    margin:20px auto 35px;
+
+}
+
+.score-circle svg{
+
+    transform:rotate(-90deg);
+
+}
+
+.bg{
+
+    fill:none;
+
+    stroke:#dbeafe;
+
+    stroke-width:12;
+
+}
+
+.progress-circle{
+
+    fill:none;
+
+    stroke-width:12;
+
+    stroke-linecap:round;
+
+    stroke-dasharray:472;
+
+    transition:stroke-dashoffset 1.5s ease;
+
+}
+
+.score-text{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+
+}
+
+.score-text h1{
+
+    margin:0;
+
+    font-size:40px;
+
+    color:#111827;
+
+}
+
+.score-text p{
+
+    margin-top:8px;
+
+    font-size:18px;
+
+    color:#4b5563;
+
+    font-weight:600;
+
+}
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    margin-top:60px;
+
+    background:#0f172a;
+
+    color:white;
+
+    text-align:center;
+
+    padding:45px 20px;
+
+}
+
+.footer-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.footer-content h3{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+.footer-content p{
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+
+    margin-bottom:12px;
+
+}
+
+.copyright{
+
+    margin-top:20px;
+
+    color:#94a3b8;
+
+    font-size:15px;
+
+}
+/* ==========================
+   RESUME TIPS
+========================== */
+
+.tips{
+
+    margin-top:15px;
+
+    padding-left:25px;
+
+}
+
+.tips li{
+
+    margin-bottom:12px;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    color:#374151;
+
+}
+/* ==========================
+   CLEAR BUTTON
+========================== */
+
+#clearBtn{
+
+    margin-top:15px;
+
+    background:#ef4444;
+
+}
+
+#clearBtn:hover{
+
+    background:#dc2626;
+
+}
