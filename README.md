@@ -56,24 +56,27 @@ An AI-powered Resume Reviewer that analyzes resumes against a job description, c
 
 ## 📸 Screenshots
 
-### Home Page
+### 🏠 Home Page
 
-> *(Add screenshot here later)*
-
-### Resume Analysis
-
-> *(Add screenshot here later)*
-
-### AI Feedback
-
-> *(Add screenshot here later)*
-
-### PDF Report
-
-> *(Add screenshot here later)*
+![Home](assets/home.png.jpeg)
 
 ---
 
+### 📊 Resume Analysis
+
+![Resume Analysis](assets/ats.png.jpeg)
+
+---
+
+### 🤖 AI Feedback
+
+![AI Feedback](assets/analysis.png.jpeg)
+
+---
+
+### 📄 PDF Report
+
+![PDF Report](assets/report.png.jpeg)
 ## 📂 Project Structure
 
 ```text
